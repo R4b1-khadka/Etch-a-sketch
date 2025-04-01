@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <style>
+      .container {
+        margin: 40px auto;
+        width: 600px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .cube:hover {
+        background-color: black;
+      }
+      .getGrid {
+        margin-left: 600px;
+        background-color: rgb(106, 237, 240);
+        color: black;
+        font-size: 20px;
+        padding: 8px 10px;
+        border: none;
+        border-radius: 12px;
+
+        /* box-shadow: 5px 5px 15px 5px #000000; */
+      }
+      .getGrid:active {
+        /* box-shadow: inset 5px 5px 15px 5px #000000; */
+        background-color: rgb(113, 243, 113);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+    <button class="getGrid">change grid</button>
+  </body>
+</html>
