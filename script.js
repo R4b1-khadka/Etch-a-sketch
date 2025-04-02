@@ -11,23 +11,26 @@ function createGrid(gridsize, row) {
     cube.style.height = `${gridsize / row - 2}px`;
     cube.style.width = `${gridsize / row - 2}px`;
     cube.classList.add("cube");
-    container.appendChild(cube);
+    // getColor();
+
     cube.addEventListener("mouseover", () => {
       let iniVal = 0.1;
       cube.style.backgroundColor = "black";
       cube.style.opacity = iniVal + 0.1;
       // iniVal = iniVal + 0.1;
     });
+
+    container.appendChild(cube);
   }
 }
-
-function srgb() {}
+// function srgb() {}
 
 let changeGrid = document.querySelector(".getGrid");
 
 changeGrid.addEventListener("click", () => {
-  let rowSize = prompt("please enter the size of row between 2 to 100", 16);
-  if (rowSize == null) {
+  let rowSize = prompt("please enter the size of row between 2 to 50", 16);
+  if ((rowSize > 50 && rowSize < 2) || rowSize == null) {
+    return;
   } else {
     createGrid(gridsize, rowSize);
   }
